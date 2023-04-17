@@ -151,6 +151,50 @@ export const footballQuestions = [  {    question: "Which player won the Europea
   }
 ];
 
+export const tvShowQuestions = [  {    question: "Which TV show is set in the fictional town of Hawkins, Indiana?",    choices: [      "Breaking Bad",      "Stranger Things",      "The Walking Dead",      "Game of Thrones"    ],
+    answer: "Stranger Things"
+  },
+  {
+    question: "Which TV show follows a high school chemistry teacher who turns to cooking methamphetamine to provide for his family?",
+    choices: [
+      "The Sopranos",
+      "Breaking Bad",
+      "The Wire",
+      "Mad Men"
+    ],
+    answer: "Breaking Bad"
+  },
+  {
+    question: "Which TV show was created by Tina Fey and is set behind the scenes of a fictional sketch comedy show?",
+    choices: [
+      "Saturday Night Live",
+      "The Office",
+      "30 Rock",
+      "Parks and Recreation"
+    ],
+    answer: "30 Rock"
+  },
+  {
+    question: "In the TV show Friends, what is the name of the person that Joey's character plays in the soap opera Days of Our Lives?",
+    choices: [
+      "Drake Ramoray",
+      "Joey Tribbiani Jr.",
+      "Joseph Francis",
+      "Joseph Ramoray"
+    ],
+    answer: "Drake Ramoray"
+  },
+  {
+    question: "Which TV show is about a group of survivors living in a post-apocalyptic world filled with zombies?",
+    choices: [
+      "The 100",
+      "The Walking Dead",
+      "Lost",
+      "Stranger Things"
+    ],
+    answer: "The Walking Dead"
+  }
+];
 
 
 
