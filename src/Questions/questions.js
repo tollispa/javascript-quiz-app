@@ -30,48 +30,58 @@ export const javaScriptQuiz = [    {
   }
 ];
 
-export const disneyQuiz = [  {    question: "In the movie 'The Lion King', what is Mufasa's last words to Simba before he dies?",    choices: [      "Remember who you are",      "You must take your place in the Circle of Life",      "Everything the light touches is our kingdom",      "I'm only brave when I have to be"    ],
-    answer: "Remember who you are"
+export const disneyQuiz = [  {    question: "What is the name of the sword in 'The Sword in the Stone'?",    choices: [      "Excalibur",      "Clarent",      "Caliburn",      "Pridwen"    ],
+    answer: "Excalibur"
   },
   {
-    question: "In 'Beauty and the Beast', what is the name of Gaston's sidekick?",
+    question: "What is the name of the giant bird in 'The Rescuers Down Under'?",
     choices: [
-      "LeFou",
-      "Gideon",
-      "Percy",
-      "Iago"
+      "Orville",
+      "Wilbur",
+      "Marahute",
+      "Aquila"
     ],
-    answer: "LeFou"
+    answer: "Marahute"
   },
   {
-    question: "What is the name of the little girl who befriends Stitch in 'Lilo & Stitch'?",
+    question: "In 'The Hunchback of Notre Dame', what is the name of the villainous judge who wants to capture Esmeralda?",
     choices: [
-      "Lilo",
-      "Nani",
-      "Malia",
-      "Pua"
+      "Frollo",
+      "Ratcliffe",
+      "Gaston",
+      "Scar"
     ],
-    answer: "Lilo"
+    answer: "Frollo"
   },
   {
-    question: "In 'Mulan', what is the name of the villain who leads the Hun army?",
+    question: "What is the name of the villainous queen in 'Snow White and the Seven Dwarfs'?",
     choices: [
-      "Shan Yu",
-      "Ming-Na",
-      "Khan",
-      "Li Shang"
+      "Grimhilde",
+      "Maleficent",
+      "Cruella De Vil",
+      "The Evil Queen"
     ],
-    answer: "Shan Yu"
+    answer: "Grimhilde"
   },
   {
-    question: "What is the name of the character voiced by Robin Williams in 'Aladdin'?",
+    question: "What is the name of the dragon in 'Sleeping Beauty'?",
     choices: [
-      "Genie",
-      "Jafar",
-      "Abu",
-      "Iago"
+      "Maleficent",
+      "Diablo",
+      "Smaug",
+      "Mushu"
     ],
-    answer: "Genie"
+    answer: "Maleficent"
+  },
+  {
+    question: "What is the name of the castle in 'Beauty and the Beast'?",
+    choices: [
+      "Cinderella Castle",
+      "Windsor Castle",
+      "Neuschwanstein Castle",
+      "Beast's Castle"
+    ],
+    answer: "Beast's Castle"
   }
 ];
 
