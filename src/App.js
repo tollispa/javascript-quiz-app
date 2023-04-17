@@ -1,6 +1,6 @@
 
 import './App.css';
-import {javaScriptQuiz, disneyQuiz, gotQuiz} from "./Questions/questions"
+import {javaScriptQuiz, disneyQuiz, gotQuiz, javaQuestions, footballQuestions} from "./Questions/questions"
 import {useState} from "react"
 
 function App() {
@@ -110,6 +110,10 @@ setEmptyQuiz(javaScriptQuiz)
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={(quizJavascript)}>JavaScript</button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(disneyQuiz)}}>Disney</button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(gotQuiz)}}>Game of Thrones</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(javaQuestions)}}>Java</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(footballQuestions)}}>Football</button>
+
+
 
 
   </div>
