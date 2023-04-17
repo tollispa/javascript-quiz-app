@@ -1,7 +1,7 @@
 
 import './App.css';
 import {javaScriptQuiz, disneyQuiz, gotQuiz, javaQuestions, footballQuestions, tvShowQuestions, friendsQuiz} from "./Questions/questions"
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 function App() {
   const [quizIndex, setQuizIndex] = useState(0)
@@ -10,13 +10,35 @@ function App() {
   const [count, setcount] = useState(0)
   const [emptyQuiz, setEmptyQuiz] = useState([])
   const [backgroundColor, setBackgroundColor] = useState("none")
-
+  const [header, setHeader] = useState("")
   const correctAnswer = emptyQuiz.map((answer) => answer)
 
 const quizJavascript = () => {
 setEmptyQuiz(javaScriptQuiz)
 }
- 
+ useEffect(() => {
+   if(emptyQuiz === javaScriptQuiz) {
+   setHeader("Javascript Quiz")
+   }
+   if(emptyQuiz === disneyQuiz) {
+    setHeader("Disney Quiz")
+    }
+    if(emptyQuiz === gotQuiz) {
+      setHeader("Game of Thrones Quiz")
+      }
+      if(emptyQuiz === javaQuestions) {
+        setHeader("Java Quiz")
+        }
+        if(emptyQuiz === footballQuestions) {
+          setHeader("Football Quiz")
+          }
+          if(emptyQuiz === tvShowQuestions) {
+            setHeader("TV-shows Quiz")
+            }
+            if(emptyQuiz === friendsQuiz) {
+              setHeader("Friends Quiz")
+              }
+ },[emptyQuiz])
   const clickAnswer = (index, choice) => {
    
     
@@ -73,11 +95,12 @@ setEmptyQuiz(javaScriptQuiz)
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-3 rounded'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+
+}
       <p className='font-bold p-6 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
       {" "}
-      {emptyQuiz.length === 0 ? null :  <span className='text-blue-600 text-sm'>{quizIndex +1}/{emptyQuiz.length}</span>
-
-      }
+    
      
       </p>
     
