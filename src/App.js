@@ -22,7 +22,7 @@ setEmptyQuiz(javaScriptQuiz)
     
     console.log("answer", correctAnswer[quizIndex].answer)
     if(quizIndex === javaScriptQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
-      setMsg(`Amazing! You passed the quiz without any wrong answers!`)
+      setMsg(`Du klarade utan fel, du e värsta mizeria nörden`)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 
@@ -93,7 +93,7 @@ setEmptyQuiz(javaScriptQuiz)
  
   { emptyQuiz.length === 0 ? null : 
 
-  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[100px] font-bold hover:shadow-lg fixed text-2xl left-5 bottom-10 sm:static sm:w-[50%]'>🔙</button>
+  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[100px] font-bold hover:shadow-lg fixed text-2xl left-5 bottom-10 sm:static sm:w-[50%]'>🢀</button>
   
 
   }
@@ -107,13 +107,13 @@ setEmptyQuiz(javaScriptQuiz)
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
   <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz!</h1>
   <p className='font-bold text-black/50'>Please select a category</p>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={(quizJavascript)}>JavaScript</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(disneyQuiz)}}>Disney</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(gotQuiz)}}>Game of Thrones</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(javaQuestions)}}>Java</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(footballQuestions)}}>Football</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(tvShowQuestions)}}>TV-show</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center"onClick={() => {setEmptyQuiz(friendsQuiz)}}>Friends</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={(quizJavascript)}>JavaScript</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(disneyQuiz)}}>Disney</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(gotQuiz)}}>Game of Thrones</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaQuestions)}}>Java</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(footballQuestions)}}>Football</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(tvShowQuestions)}}>TV-shows</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(friendsQuiz)}}>Friends</button>
 
 
 
