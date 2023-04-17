@@ -196,6 +196,32 @@ export const tvShowQuestions = [  {    question: "Which TV show is set in the fi
   }
 ];
 
+export const friendsQuiz = [  {    question: "What is Joey's favorite food?",    choices: ["Pizza", "Lasagna", "Spaghetti", "Meatball Sub"],
+    answer: "Pizza"
+  },
+  {
+    question: "What is Chandler's middle name?",
+    choices: ["Muriel", "Bing", "Matthew", "David"],
+    answer: "Muriel"
+  },
+  {
+    question: "What was Monica's nickname when she was a field hockey goalie in high school?",
+    choices: ["The Wall", "The Brick Wall", "Big Red", "Noisy Girl"],
+    answer: "Big Red"
+  },
+  {
+    question: "What is the name of Phoebe's half-brother?",
+    choices: ["Frank Jr.", "Chandler", "Joey", "Ross"],
+    answer: "Frank Jr."
+  },
+  {
+    question: "What is the name of the restaurant where Monica works as head chef?",
+    choices: ["Central Perk", "Joey's Pizza", "Riff's", "Alessandro's"],
+    answer: "Alessandro's"
+  }
+];
+
+
 
 
 
