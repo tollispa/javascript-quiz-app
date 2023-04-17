@@ -1,8 +1,13 @@
-export const javaScriptQuiz = [  {    
-    question: "What is the result of 2 + 2?",    
-    choices: ["3", "4", "5", "6"],
-    answer: "4"
-  },
+export const javaScriptQuiz = [    {
+  question: "Which JavaScript framework has the largest market share according to the 2021 State of JavaScript survey?",
+  choices: [
+    "React",
+    "Angular",
+    "Vue.js",
+    "Ember.js"
+  ],
+  answer: "React"
+},
   {
     question: "What is the output of console.log('Hello, world!')?",
     choices: ["Hello, world!", "undefined", "null", "NaN"],
@@ -75,6 +80,58 @@ choices: ["Needle", "Longclaw", "Ice", "Oathkeeper"],
 answer: "Longclaw"
 }
 ];
+
+export const javaQuestions = [  {    question: "What keyword is used to define a variable in Java?",    choices: ["var", "let", "const", "None of the above"],
+    answer: "None of the above"
+  },
+  {
+    question: "What is the syntax for a for loop in Java?",
+    choices: ["for i in range(10)", "for (i = 0; i < 10; i++)", "for (i < 10; i++)", "None of the above"],
+    answer: "for (i = 0; i < 10; i++)"
+  },
+  {
+    question: "What is the output of the following code snippet?\nint x = 5;\nSystem.out.println(x++);\nSystem.out.println(++x);",
+    choices: ["5 6", "6 6", "5 5", "6 5"],
+    answer: "5 6"
+  },
+  {
+    question: "What is the difference between == and equals() method in Java?",
+    choices: ["They are the same.", "They compare the values of two objects.", "They compare the memory addresses of two objects.", "None of the above."],
+    answer: "They compare the memory addresses of two objects."
+  },
+  {
+    question: "Which keyword is used to define a class in Java?",
+    choices: ["class", "interface", "extends", "implements"],
+    answer: "class"
+  }
+];
+
+export const footballQuestions = [  {    question: "Which player won the European Golden Shoe in the 2019-20 season?",    choices: ["Lionel Messi", "Cristiano Ronaldo", "Robert Lewandowski", "Ciro Immobile"],
+    answer: "Ciro Immobile"
+  },
+  {
+    question: "Which team won the 2021 Copa America?",
+    choices: ["Argentina", "Brazil", "Chile", "Uruguay"],
+    answer: "Argentina"
+  },
+  {
+    question: "Who is the all-time top scorer in the UEFA Champions League?",
+    choices: ["Lionel Messi", "Cristiano Ronaldo", "Raúl González", "Robert Lewandowski"],
+    answer: "Cristiano Ronaldo"
+  },
+  {
+    question: "Which coach has won the most UEFA Champions League titles?",
+    choices: ["Alex Ferguson", "Carlo Ancelotti", "Zinedine Zidane", "Pep Guardiola"],
+    answer: "Zinedine Zidane"
+  },
+  {
+    question: "Who is the only player to have scored in a Champions League final, a World Cup final, and a Euro final?",
+    choices: ["Lionel Messi", "Cristiano Ronaldo", "Andrés Iniesta", "David Villa"],
+    answer: "Andrés Iniesta"
+  }
+];
+
+
 
 
 
