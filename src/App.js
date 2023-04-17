@@ -81,7 +81,7 @@ setEmptyQuiz(javaScriptQuiz)
      
       </p>
     
-    <p className='flex flex-wrap sm:relative justify-center text-center'>
+    <p className='flex flex-wrap sm:relative justify-center text-center min-w-[50%]'>
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
     <span className="bg-white text-black border-2 border-black font-bold shadow-lg m-1 p-2 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
@@ -93,7 +93,7 @@ setEmptyQuiz(javaScriptQuiz)
  
   { emptyQuiz.length === 0 ? null : 
 
-  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[100px] font-bold hover:shadow-lg fixed text-2xl left-5 bottom-10 sm:static sm:w-[50%]'>🢀</button>
+  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[100px]  hover:shadow-lg fixed text-xl left-5 bottom-10 sm:static sm:w-[50%]'>Back</button>
   
 
   }
