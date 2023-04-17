@@ -22,7 +22,7 @@ setEmptyQuiz(javaScriptQuiz)
     
     console.log("answer", correctAnswer[quizIndex].answer)
     if(quizIndex === javaScriptQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
-      setMsg(`Amazing! You passed the quiz without any wrong answers!`)
+      setMsg(`Du klarade utan fel, du är värsta mizeria nörden`)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 

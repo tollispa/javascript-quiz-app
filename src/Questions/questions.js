@@ -196,30 +196,36 @@ export const tvShowQuestions = [  {    question: "Which TV show is set in the fi
   }
 ];
 
-export const friendsQuiz = [  {    question: "What is Joey's favorite food?",    choices: ["Pizza", "Lasagna", "Spaghetti", "Meatball Sub"],
-    answer: "Pizza"
+export const friendsQuiz = [  {    question: "What was the name of the original song that Ross wrote for Rachel when they were in high school?",    choices: ["With or Without You", "I Will Always Love You", "Every Breath You Take", "Emotional Knapsack"],
+    answer: "Emotional Knapsack"
   },
   {
-    question: "What is Chandler's middle name?",
-    choices: ["Muriel", "Bing", "Matthew", "David"],
-    answer: "Muriel"
+    question: "What is the name of Joey's agent?",
+    choices: ["Estelle", "Amanda", "Janine", "Gloria"],
+    answer: "Estelle"
   },
   {
-    question: "What was Monica's nickname when she was a field hockey goalie in high school?",
-    choices: ["The Wall", "The Brick Wall", "Big Red", "Noisy Girl"],
-    answer: "Big Red"
+    question: "What did Chandler do for a living before switching to advertising?",
+    choices: ["Data Processing", "Statistical Analysis and Reconfiguration", "Transponding", "Procurement"],
+    answer: "Statistical Analysis and Reconfiguration"
   },
   {
-    question: "What is the name of Phoebe's half-brother?",
-    choices: ["Frank Jr.", "Chandler", "Joey", "Ross"],
-    answer: "Frank Jr."
+    question: "What was the name of the girl who mistakenly believed that Chandler was gay and tried to set him up with her boss?",
+    choices: ["Mindy", "Ginger", "Janice", "Jill"],
+    answer: "Ginger"
   },
   {
-    question: "What is the name of the restaurant where Monica works as head chef?",
-    choices: ["Central Perk", "Joey's Pizza", "Riff's", "Alessandro's"],
-    answer: "Alessandro's"
+    question: "What is the name of the museum where Ross works as a paleontologist?",
+    choices: ["The American Museum of Natural History", "The Smithsonian", "The British Museum", "The Louvre"],
+    answer: "The American Museum of Natural History"
+  },
+  {
+    question: "What is the name of the brand of men's lipstick that Joey tries to promote?",
+    choices: ["Lip Service", "Manscara", "Joey's Lipstick", "Lipstick for Men"],
+    answer: "Manscara"
   }
 ];
+
 
 
 
