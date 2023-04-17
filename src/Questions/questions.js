@@ -30,31 +30,51 @@ export const javaScriptQuiz = [    {
   }
 ];
 
-export const disneyQuiz = [  {    question: "What is the name of the mermaid in Disney's The Little Mermaid?",   
-   choices: ["Ariel", "Jasmine", "Belle", "Cinderella"],
-    answer: "Ariel"
+export const disneyQuiz = [  {    question: "In the movie 'The Lion King', what is Mufasa's last words to Simba before he dies?",    choices: [      "Remember who you are",      "You must take your place in the Circle of Life",      "Everything the light touches is our kingdom",      "I'm only brave when I have to be"    ],
+    answer: "Remember who you are"
   },
   {
-    question: "In which Disney movie does the character Mulan appear?",
-    choices: ["Pocahontas", "Mulan", "Moana", "Brave"],
-    answer: "Mulan"
+    question: "In 'Beauty and the Beast', what is the name of Gaston's sidekick?",
+    choices: [
+      "LeFou",
+      "Gideon",
+      "Percy",
+      "Iago"
+    ],
+    answer: "LeFou"
   },
   {
-    question: "What is the name of the main character in Disney's Beauty and the Beast?",
-    choices: ["Belle", "Aurora", "Jasmine", "Cinderella"],
-    answer: "Belle"
+    question: "What is the name of the little girl who befriends Stitch in 'Lilo & Stitch'?",
+    choices: [
+      "Lilo",
+      "Nani",
+      "Malia",
+      "Pua"
+    ],
+    answer: "Lilo"
   },
   {
-    question: "What is the name of the sister duo who are known for their red hair in Disney's Frozen?",
-    choices: ["Anna and Elsa", "Aurora and Jasmine", "Merida and Moana", "Rapunzel and Tiana"],
-    answer: "Anna and Elsa"
+    question: "In 'Mulan', what is the name of the villain who leads the Hun army?",
+    choices: [
+      "Shan Yu",
+      "Ming-Na",
+      "Khan",
+      "Li Shang"
+    ],
+    answer: "Shan Yu"
   },
   {
-    question: "What is the name of the villain in Disney's Sleeping Beauty?",
-    choices: ["Maleficent", "Ursula", "Jafar", "Gaston"],
-    answer: "Maleficent"
+    question: "What is the name of the character voiced by Robin Williams in 'Aladdin'?",
+    choices: [
+      "Genie",
+      "Jafar",
+      "Abu",
+      "Iago"
+    ],
+    answer: "Genie"
   }
 ];
+
 
 export const gotQuiz = [  {    question: "Who is the main character in Game of Thrones?",    choices: ["Jon Snow", "Tyrion", "Daenerys", "Cersei"],
 answer: "Jon Snow"
