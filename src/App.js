@@ -110,7 +110,7 @@ function App() {
     
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-4 min-h-[50px] sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
