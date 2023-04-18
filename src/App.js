@@ -40,7 +40,7 @@ function App() {
   const clickAnswer = (index, choice) => {
    
     
-    console.log("answer", correctAnswer[quizIndex].answer)
+    
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
       setMsg(`Congratulations! You passed the quiz without any wrong answers!`)
       setColor("green")
@@ -120,13 +120,13 @@ function App() {
  
   { emptyQuiz.length === 0 ? null : 
 
-  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[100px]  hover:shadow-lg fixed text-xl left-5 bottom-10 sm:static sm:w-[50%]'>Back</button>
+  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[5%] hover:shadow-lg absolute text-xl left-5 bottom-20 sm:static sm:w-[50%]'>Back</button>
   
 
   }
   { emptyQuiz.length === 0 ? null : 
 
-<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[100px] font-bold hover:shadow-lg fixed right-10 bottom-10 sm:static sm:w-[50%] sm:m-4'>🏠</button>
+<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[30%] h-[5%] font-bold hover:shadow-lg absolute right-10 bottom-20 sm:static sm:w-[50%] sm:m-4'>🏠</button>
 
 
 }
