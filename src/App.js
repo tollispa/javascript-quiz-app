@@ -13,9 +13,7 @@ function App() {
   const [header, setHeader] = useState("")
   const correctAnswer = emptyQuiz.map((answer) => answer)
 
-const quizJavascript = () => {
-setEmptyQuiz(javaScriptQuiz)
-}
+
  useEffect(() => {
    if(emptyQuiz === javaScriptQuiz) {
    setHeader("Javascript Quiz")
@@ -136,7 +134,7 @@ setEmptyQuiz(javaScriptQuiz)
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
   <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz!</h1>
   <p className='font-bold text-black/50'>Please select a category</p>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={(quizJavascript)}>JavaScript</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaScriptQuiz)}}>JavaScript</button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(disneyQuiz)}}>Disney</button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(gotQuiz)}}>Game of Thrones</button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaQuestions)}}>Java</button>
