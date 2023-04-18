@@ -99,10 +99,10 @@ function App() {
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-7'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-8'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
-      <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
+      <p className='font-bold p-4 text-m sm:text-4xl min-h-[100px]'>{emptyQuiz[quizIndex]?.question}
       {" "}
     
      
@@ -110,7 +110,7 @@ function App() {
     
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-2 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-4 min-h-[50px] sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
