@@ -99,16 +99,16 @@ function App() {
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-5'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-7'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
-      <p className='font-bold p-6 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
+      <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
       {" "}
     
      
       </p>
     
-    <p className='flex flex-wrap sm:relative justify-center text-center min-w-[50%]'>
+    <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
     <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-2 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
@@ -120,13 +120,13 @@ function App() {
  
   { emptyQuiz.length === 0 ? null : 
 
-  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[5%] hover:shadow-lg absolute text-xl left-5 bottom-20 sm:static sm:w-[50%]'>Back</button>
+  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[50px] hover:shadow-lg absolute text-xl left-5 bottom-20 sm:static sm:w-[50%]'>Back</button>
   
 
   }
   { emptyQuiz.length === 0 ? null : 
 
-<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[30%] h-[5%] font-bold hover:shadow-lg absolute right-10 bottom-20 sm:static sm:w-[50%] sm:m-4'>🏠</button>
+<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[30%] h-[50px] font-bold hover:shadow-lg absolute right-10 bottom-20 sm:static sm:w-[50%] sm:m-4'>🏠</button>
 
 
 }
