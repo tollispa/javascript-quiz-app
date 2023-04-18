@@ -1,5 +1,6 @@
 
 import './App.css';
+import { FaSync } from 'react-icons/fa';
 
 import { 
   javaScriptArray, 
@@ -71,11 +72,16 @@ console.log("e", emptyQuiz)
       setMsg("Oops! Wrong again!")
       return
     }
+    if(choice === correctAnswer[quizIndex].answer && color === "green"){
+      setMsg("Nice! Correct answer again!")
+      setQuizIndex(quizIndex+1)
+      return
+    }
 
     if (choice === correctAnswer[quizIndex].answer) {
       setColor("green")
       setBackgroundColor("#80ff80")
-      setMsg("Nice! Correct answer!")
+      setMsg("Correct answer!")
       return setQuizIndex(quizIndex+1)
     }else {
       setColor("red")
@@ -128,7 +134,7 @@ console.log("e", emptyQuiz)
     </span>
   ))}{
     emptyQuiz.length === 0 ? null :
-    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-[50%]`}>{msg}</span>
+    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-[100%]`}>{msg}</span>
   }
  
   { emptyQuiz.length === 0 ? null : 
@@ -145,7 +151,7 @@ console.log("e", emptyQuiz)
 }
 </p>
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
-  <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz! <button onClick={() => window.location.reload()}>🗘</button></h1>
+  <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1>
   <p className='font-bold text-black/50'>Please select a category</p>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript</button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney</button>
