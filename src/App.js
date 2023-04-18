@@ -43,18 +43,23 @@ setEmptyQuiz(javaScriptQuiz)
    
     
     console.log("answer", correctAnswer[quizIndex].answer)
-    if(quizIndex === javaScriptQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
+    if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
       setMsg(`Congratulations! You passed the quiz without any wrong answers!`)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 
     }
-    if(quizIndex === javaScriptQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
+    if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
       setMsg(`Correct! This was the last question, you guessed wrong (${count}) times!`)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 
     }
+    if(choice !== correctAnswer[quizIndex].answer && color === "red"){
+      setMsg("Oops! Wrong again!")
+      return
+    }
+
     if (choice === correctAnswer[quizIndex].answer) {
       setColor("green")
       setBackgroundColor("#80ff80")
@@ -95,7 +100,7 @@ setEmptyQuiz(javaScriptQuiz)
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-3 rounded'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-5'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
       <p className='font-bold p-6 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
@@ -106,7 +111,7 @@ setEmptyQuiz(javaScriptQuiz)
     
     <p className='flex flex-wrap sm:relative justify-center text-center min-w-[50%]'>
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white text-black border-2 border-black font-bold shadow-lg m-1 p-2 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-2 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
