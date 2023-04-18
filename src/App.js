@@ -99,12 +99,10 @@ function App() {
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-8'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
       <p className='font-bold p-4 text-m sm:text-4xl min-h-[100px]'>{emptyQuiz[quizIndex]?.question}
-      {" "}
-    
      
       </p>
     
