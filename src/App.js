@@ -1,7 +1,19 @@
 
 import './App.css';
-import {javaScriptQuiz, disneyQuiz, gotQuiz, javaQuestions, footballQuestions, tvShowQuestions, friendsQuiz} from "./Questions/questions"
+
+import { 
+  javaScriptArray, 
+  disneyArray, 
+  gotArray, 
+  javaArray, 
+  footballArray, 
+  tvShowArray, 
+  friendsArray 
+} from './Questions/randomQuestions';
+
 import {useEffect, useState} from "react"
+
+
 
 function App() {
   const [quizIndex, setQuizIndex] = useState(0)
@@ -13,27 +25,28 @@ function App() {
   const [header, setHeader] = useState("")
   const correctAnswer = emptyQuiz.map((answer) => answer)
 
-
+console.log("e", emptyQuiz)
+  
  useEffect(() => {
-   if(emptyQuiz === javaScriptQuiz) {
+   if(emptyQuiz === javaScriptArray) {
    setHeader("Javascript Quiz")
    }
-   if(emptyQuiz === disneyQuiz) {
+   if(emptyQuiz === disneyArray) {
     setHeader("Disney Quiz")
     }
-    if(emptyQuiz === gotQuiz) {
+    if(emptyQuiz === gotArray) {
       setHeader("Game of Thrones Quiz")
       }
-      if(emptyQuiz === javaQuestions) {
+      if(emptyQuiz === javaArray) {
         setHeader("Java Quiz")
         }
-        if(emptyQuiz === footballQuestions) {
+        if(emptyQuiz === footballArray) {
           setHeader("Football Quiz")
           }
-          if(emptyQuiz === tvShowQuestions) {
+          if(emptyQuiz === tvShowArray) {
             setHeader("TV-shows Quiz")
             }
-            if(emptyQuiz === friendsQuiz) {
+            if(emptyQuiz === friendsArray) {
               setHeader("Friends Quiz")
               }
  },[emptyQuiz])
@@ -108,7 +121,7 @@ function App() {
     
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-[50%] " key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-[100%] sm:min-w-[40%] sm:h-[70px] sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
@@ -130,15 +143,15 @@ function App() {
 }
 </p>
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
-  <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz!</h1>
+  <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz! <button onClick={() => window.location.reload()}>🗘</button></h1>
   <p className='font-bold text-black/50'>Please select a category</p>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaScriptQuiz)}}>JavaScript</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(disneyQuiz)}}>Disney</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(gotQuiz)}}>Game of Thrones</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaQuestions)}}>Java</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(footballQuestions)}}>Football</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(tvShowQuestions)}}>TV-shows</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(friendsQuiz)}}>Friends</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaArray)}}>Java</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(footballArray)}}>Football</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows</button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends</button>
 
 
 
