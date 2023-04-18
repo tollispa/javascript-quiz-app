@@ -23,6 +23,7 @@ function App() {
   const [emptyQuiz, setEmptyQuiz] = useState([])
   const [backgroundColor, setBackgroundColor] = useState("none")
   const [header, setHeader] = useState("")
+ 
   const correctAnswer = emptyQuiz.map((answer) => answer)
 
 console.log("e", emptyQuiz)
@@ -55,13 +56,13 @@ console.log("e", emptyQuiz)
     
     
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
-      setMsg(`Congratulations! You passed the quiz without any wrong answers!`)
+      setMsg(`Congratulations!✅ You passed the quiz without any wrong answers! `)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 
     }
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
-      setMsg(`Correct! This was the last question, you guessed wrong (${count}) times!`)
+      setMsg(`Correct! ✅ This was the last question, you guessed wrong (${count}) times!`)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 
@@ -120,6 +121,7 @@ console.log("e", emptyQuiz)
       </p>
     
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
+    
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
     <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-[100%] sm:min-w-[40%] sm:h-[70px] sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
