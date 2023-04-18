@@ -97,6 +97,7 @@ setEmptyQuiz(javaScriptQuiz)
     setMsg("")
     setBackgroundColor("transparent")
     setQuizIndex(0)
+    setColor("#8B0000")
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
