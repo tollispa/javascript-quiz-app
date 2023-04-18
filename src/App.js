@@ -120,13 +120,13 @@ function App() {
  
   { emptyQuiz.length === 0 ? null : 
 
-  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[50px] hover:shadow-lg absolute text-xl left-5 bottom-20 sm:static sm:w-[50%]'>Back</button>
+  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[50px] hover:shadow-lg absolute text-xl left-5 bottom-5 sm:static sm:w-[50%]'>Back</button>
   
 
   }
   { emptyQuiz.length === 0 ? null : 
 
-<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[30%] h-[50px] font-bold hover:shadow-lg absolute right-10 bottom-20 sm:static sm:w-[50%] sm:m-4'>🏠</button>
+<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[30%] h-[50px] font-bold hover:shadow-lg absolute right-10 bottom-5 sm:static sm:w-[50%] sm:m-4'>🏠</button>
 
 
 }
