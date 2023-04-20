@@ -62,10 +62,19 @@ function App() {
       setColor("green")
       setHeader("Quiz completed!")
       setBackgroundColor("#80ff80")
+      
       return 
     }
+    if(quizIndex === emptyQuiz.length -2){
+      setColor("green")
+      setMsg("Correct! This is the last question now!")
+      setBackgroundColor("#80ff80")
+      setQuizIndex(quizIndex+1)
+      return
+    }
+
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
-      setMsg(`Correct! This was the last question!`)
+      setMsg(`Correct!`)
       setColor("green")
       setHeader("Quiz completed! ✔️")
       
@@ -142,7 +151,7 @@ function App() {
     </span>
   ))}{
     emptyQuiz.length === 0 ? null :
-    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-[50%]`}>{msg}</span>
+    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-auto p-2 sm:w-[50%]`}>{msg}</span>
   }
  
   { emptyQuiz.length === 0 ? null : 
