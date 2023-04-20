@@ -126,7 +126,7 @@ function App() {
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
 
 
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} <span className='text-sm text-white absolute right-10 top-10'>{quizIndex +1}/{emptyQuiz.length}</span></h1>
 
 }
 { emptyQuiz.length > 0 && count > 0  ? <p className='font-bold h-[16px]'>Wrong answers: <span className='text-red-600 font-bold' >{count}</span></p> : <p className='h-[16px]'></p>}
