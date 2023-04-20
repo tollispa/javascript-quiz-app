@@ -173,14 +173,18 @@ function App() {
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
  
   <p className='font-bold text-black/50'>Choose category</p>
- 
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
+
+ <div className="overflow-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 h-[55%]">
+  
+ <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
   <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
   <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones<span className='absolute left-2 top-[25%]'>📺</span></button>
   <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaArray)}}>Java <FaJava className='absolute left-2 top-[35%] text-yellow-100' /></button>
   <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
   <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
   <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
+ </div>
+
   
  
 
