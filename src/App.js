@@ -1,6 +1,6 @@
 
 import './App.css';
-import { FaSync, FaJs, FaJava, FaArrowDown, FaArrowUp, FaArrowCircleUp} from 'react-icons/fa';
+import { FaSync, FaJs, FaJava, FaArrowDown, FaArrowUp} from 'react-icons/fa';
 
 
 
