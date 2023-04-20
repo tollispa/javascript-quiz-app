@@ -1,6 +1,6 @@
 
 import './App.css';
-import { FaSync, FaJs, FaJava} from 'react-icons/fa';
+import { FaSync, FaJs, FaJava, FaArrowDown, FaArrowUp, FaArrowCircleUp} from 'react-icons/fa';
 
 
 
@@ -26,6 +26,7 @@ function App() {
   const [emptyQuiz, setEmptyQuiz] = useState([])
   const [backgroundColor, setBackgroundColor] = useState("none")
   const [header, setHeader] = useState("")
+  const [scrollBtn, setScrollBtn] = useState(true)
   
  
   const correctAnswer = emptyQuiz.map((answer) => answer)
@@ -125,6 +126,18 @@ function App() {
     
   }
 
+  const slideDown = () => {
+    const slider = document.getElementById("slider");
+    slider.scrollTop += 400; // Scroll down by 400 pixels
+    setScrollBtn(!scrollBtn)
+  }
+
+  const slideUp = () => {
+    const slider = document.getElementById("slider");
+    slider.scrollTop -= 400; // Scroll down by 400 pixels
+    setScrollBtn(!scrollBtn)
+  }
+
   const homeBtn = () => {
     setEmptyQuiz([])
     setcount(null)
@@ -172,17 +185,24 @@ function App() {
 </p>
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
  
-  <p className='font-bold text-black/50'>Choose category</p>
-
- <div className="overflow-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 h-[55%]">
+  <p className='font-bold text-black'>Select category</p>
+  <p className=' text-black/50 text-sm'>Scroll down for more categories</p>
   
- <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones<span className='absolute left-2 top-[25%]'>📺</span></button>
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaArray)}}>Java <FaJava className='absolute left-2 top-[35%] text-yellow-100' /></button>
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
-  <button className="bg-black rounded text-white cursor-pointer p-3 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
+   <button className='pr-3'><FaArrowDown className='items-center align-center justify-center m-1' onClick={slideDown}size={25} /> </button>
+   <button className='pl-3'><FaArrowUp className='items-center align-center justify-center m-1' onClick={slideUp} size={25} /> </button>
+
+    
+
+
+ <div id="slider" className="scroll-smooth overflow-auto scrollbar-thin scrollbar-thumb-gray-500  scrollbar-track-gray-200 h-[55%] scrollbar-w-2 sm:overflow-visible">
+  
+ <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
+  <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaArray)}}>Java <FaJava className='absolute left-2 top-[35%] text-yellow-100' /></button>
+  <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
  </div>
 
   
