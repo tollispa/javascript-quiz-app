@@ -74,7 +74,7 @@ function App() {
     }
 
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
-      setMsg(`Correct!`)
+      setMsg(`Correct! Bravo!`)
       setColor("green")
       setHeader("Quiz completed! ✔️")
       
