@@ -137,7 +137,7 @@ function App() {
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
 
 
-       {emptyQuiz.length === 0 ? <h1 className='font-bold text-2xl text-center m-2 bg-black text-white p-6 w-full shadow-lg'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1> :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} <span className='text-sm text-white absolute right-10 top-10'>{quizIndex +1}/{emptyQuiz.length}</span></h1>
+       {emptyQuiz.length === 0 ? <h1 className='font-bold text-2xl text-center m-2 bg-black text-white p-8 w-full shadow-lg'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1> :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-8'>{header} <span className='text-sm text-white absolute right-10 top-10'>{quizIndex +1}/{emptyQuiz.length}</span></h1>
 
 }
 { emptyQuiz.length > 0 && count > 0  ? <p className='font-bold h-[16px]'>Wrong answers: <span className='text-red-600 font-bold' >{count}</span></p> : <p className='h-[16px]'></p>}
