@@ -20,7 +20,7 @@ function App() {
   const [quizIndex, setQuizIndex] = useState(0)
   const [msg, setMsg] = useState("")
   const [color, setColor] = useState("#8B0000")
-  const [count, setcount] = useState(0)
+  const [count, setcount] = useState(null)
   const [emptyQuiz, setEmptyQuiz] = useState([])
   const [backgroundColor, setBackgroundColor] = useState("none")
   const [header, setHeader] = useState("")
@@ -63,13 +63,14 @@ function App() {
       return 
     }
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
-      setMsg(`Correct! ✅ This was the last question, you guessed wrong (${count}) times!`)
+      setMsg(`Correct! ✅ This was the last question!`)
       setColor("green")
       setBackgroundColor("#80ff80")
       return 
     }
     if(choice !== correctAnswer[quizIndex].answer && color === "red"){
       setMsg("Oops! Wrong again!")
+      setcount(count+1)
       return
     }
     if(choice === correctAnswer[quizIndex].answer && color === "green"){
@@ -111,7 +112,7 @@ function App() {
 
   const homeBtn = () => {
     setEmptyQuiz([])
-    setcount(0)
+    setcount(null)
     setMsg("")
     setBackgroundColor("transparent")
     setQuizIndex(0)
@@ -119,9 +120,12 @@ function App() {
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
+
+
        {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-scree text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
+{emptyQuiz.length === 0 ? null : <p className='font-bold'>Wrong answers count <span className='text-red-600 font-bold' >{count}</span></p>}
       <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
      
       </p>
