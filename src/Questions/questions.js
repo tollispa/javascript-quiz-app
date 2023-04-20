@@ -71,6 +71,46 @@ export const javaScriptQuiz = [    {
 
 export const disneyQuiz = [ 
   {
+    question: "What is the name of the boy who befriends Baloo in 'The Jungle Book' and sings 'The Bare Necessities'?",
+    choices: [
+      "Mowgli",
+      "Bagheera",
+      "Kaa",
+      "Shere Khan"
+    ],
+    answer: "Mowgli"
+  },
+  {
+    question: "In 'Aladdin', what is the name of the tiger who accompanies Jasmine?",
+    choices: [
+      "Rajah",
+      "Abu",
+      "Iago",
+      "Jafar"
+    ],
+    answer: "Rajah"
+  },
+  {
+    question: "What is the name of the villainous sorcerer in 'The Sword in the Stone' who seeks to prevent Arthur from becoming king?",
+    choices: [
+      "Morgana le Fay",
+      "Madam Mim",
+      "Maleficent",
+      "Merlin"
+    ],
+    answer: "Madam Mim"
+  },
+  {
+    question: "In 'The Little Mermaid', what is the name of Ariel's best friend, a fish who accompanies her on her adventures?",
+    choices: [
+      "Flounder",
+      "Sebastian",
+      "Scuttle",
+      "Max"
+    ],
+    answer: "Flounder"
+  },
+  {
     question: "In 'The Little Mermaid', what does Ariel trade to Ursula in order to become human?",
     choices: ["Her voice", "Her soul", "Her family", "Her beauty"],
     answer: "Her voice"
@@ -159,7 +199,50 @@ export const disneyQuiz = [
 ];
 
 
-export const gotQuiz = [  {    question: "Who is the main character in Game of Thrones?",    choices: ["Jon Snow", "Tyrion", "Daenerys", "Cersei"],
+export const gotQuiz = [  
+  {
+    question: "What is the name of the blacksmith who forged Ned Stark's sword, Ice?",
+    choices: [
+      "Tobho Mott",
+      "Gendry",
+      "Mikken",
+      "Donal Noye"
+    ],
+    answer: "Mikken"
+  },
+  {
+    question: "What is the name of the leader of the Brotherhood Without Banners?",
+    choices: [
+      "Beric Dondarrion",
+      "Thoros of Myr",
+      "Jaqen H'ghar",
+      "Rorge"
+    ],
+    answer: "Beric Dondarrion"
+  },
+  {
+    question: "What is the name of the poison used to kill Joffrey Baratheon at his wedding?",
+    choices: [
+      "The Strangler",
+      "The Tears of Lys",
+      "Milk of the Poppy",
+      "Nightshade"
+    ],
+    answer: "The Strangler"
+  },
+  {
+    question: "What is the name of the Valyrian steel sword that belongs to House Tarly?",
+    choices: [
+      "Heartsbane",
+      "Ice",
+      "Oathkeeper",
+      "Widow's Wail"
+    ],
+    answer: "Heartsbane"
+  },
+  
+  
+  {    question: "Who is the main character in Game of Thrones?",    choices: ["Jon Snow", "Tyrion", "Daenerys", "Cersei"],
 answer: "Jon Snow"
 },
 {
@@ -184,7 +267,50 @@ answer: "Longclaw"
 }
 ];
 
-export const javaQuestions = [  {    question: "What keyword is used to define a variable in Java?",    choices: ["var", "let", "const", "None of the above"],
+export const javaQuestions = [ 
+  {
+    question: "What is the keyword used in Java to declare a variable that cannot be changed after initialization?",
+    choices: [
+      "final",
+      "const",
+      "static",
+      "private"
+    ],
+    answer: "final"
+  },
+  {
+    question: "What is the default value of an uninitialized boolean variable in Java?",
+    choices: [
+      "true",
+      "false",
+      "null",
+      "0"
+    ],
+    answer: "false"
+  },
+  {
+    question: "What is the purpose of the 'try-catch' block in Java?",
+    choices: [
+      "To handle exceptions",
+      "To define a loop",
+      "To define a method",
+      "To declare a variable"
+    ],
+    answer: "To handle exceptions"
+  },
+  {
+    question: "What is the basic unit of object-oriented programming in Java?",
+    choices: [
+      "Class",
+      "Method",
+      "Interface",
+      "Package"
+    ],
+    answer: "Class"
+  },
+  
+  {    
+    question: "What keyword is used to define a variable in Java?",    choices: ["var", "let", "const", "None of the above"],
     answer: "None of the above"
   },
   {
@@ -263,7 +389,69 @@ export const javaQuestions = [  {    question: "What keyword is used to define a
   
 ];
 
-export const footballQuestions = [  {    question: "Which player won the European Golden Shoe in the 2019-20 season?",    choices: ["Lionel Messi", "Cristiano Ronaldo", "Robert Lewandowski", "Ciro Immobile"],
+export const footballQuestions = [ 
+  {
+    question: "Which country has won the most African Cup of Nations titles?",
+    choices: [
+      "Egypt",
+      "Nigeria",
+      "Cameroon",
+      "Ghana"
+    ],
+    answer: "Egypt"
+  },
+  {
+    question: "Who is the all-time leading scorer for the Spanish national football team?",
+    choices: [
+      "David Villa",
+      "Fernando Torres",
+      "Raul",
+      "David Silva"
+    ],
+    answer: "David Villa"
+  },
+  {
+    question: "Who was the captain of the Italian national team that won the 2006 FIFA World Cup?",
+    choices: [
+      "Francesco Totti",
+      "Gianluigi Buffon",
+      "Alessandro Del Piero",
+      "Fabio Cannavaro"
+    ],
+    answer: "Fabio Cannavaro"
+  },
+  {
+    question: "Which team won the first ever English Premier League title in 1992-93?",
+    choices: [
+      "Manchester United",
+      "Blackburn Rovers",
+      "Arsenal",
+      "Liverpool"
+    ],
+    answer: "Manchester United"
+  },
+  {
+    question: "Who was the first goalkeeper to win the Ballon d'Or award?",
+    choices: [
+      "Lev Yashin",
+      "Gianluigi Buffon",
+      "Peter Schmeichel",
+      "Oliver Kahn"
+    ],
+    answer: "Lev Yashin"
+  },
+  {
+    question: "Who is the all-time leading scorer in the history of the English Premier League?",
+    choices: [
+      "Alan Shearer",
+      "Wayne Rooney",
+      "Thierry Henry",
+      "Frank Lampard"
+    ],
+    answer: "Alan Shearer"
+  },
+  {    
+    question: "Which player won the European Golden Shoe in the 2019-20 season?",    choices: ["Lionel Messi", "Cristiano Ronaldo", "Robert Lewandowski", "Ciro Immobile"],
     answer: "Ciro Immobile"
   },
   {
