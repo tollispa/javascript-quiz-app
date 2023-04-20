@@ -1,6 +1,7 @@
 
 import './App.css';
-import { FaSync } from 'react-icons/fa';
+import { FaSync, FaJs, FaJava} from 'react-icons/fa';
+
 
 
 import { 
@@ -25,6 +26,7 @@ function App() {
   const [emptyQuiz, setEmptyQuiz] = useState([])
   const [backgroundColor, setBackgroundColor] = useState("none")
   const [header, setHeader] = useState("")
+  
  
   const correctAnswer = emptyQuiz.map((answer) => answer)
 
@@ -55,7 +57,7 @@ function App() {
  },[emptyQuiz])
   const clickAnswer = (index, choice) => {
    
-    
+ 
     
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === null){
       setMsg(`Amazing! You passed the quiz without any wrong answers!`)
@@ -83,7 +85,7 @@ function App() {
     }
     if(choice !== correctAnswer[quizIndex].answer && color === "red"){
       setMsg("Oops! Wrong again!")
-      setcount(count+1)
+     
       return
     }
     if(choice === correctAnswer[quizIndex].answer && color === "green"){
@@ -143,10 +145,11 @@ function App() {
      
       </p>
     
-    <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
+    <p className='flex flex-wrap sm:relative justify-center text-center m-1 w-full'>
     
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-blue-100 cursor-pointer  text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:w-[40%] sm:h-auto sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-blue-100 cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:w-[40%] sm:h-auto sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
+     
       {choice}
     </span>
   ))}{
@@ -168,15 +171,18 @@ function App() {
 }
 </p>
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
-  <h1 className='font-bold text-2xl mb-10'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1>
+  <h1 className='font-bold text-2xl mb-10 bg-black text-white p-7 rounded shadow-lg'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1>
   <p className='font-bold text-black/50'>Select a category</p>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(javaArray)}}>Java</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(footballArray)}}>Football</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows</button>
-  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends</button>
+ 
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaArray)}}>Java <FaJava className='absolute left-2 top-[35%] text-yellow-100' /></button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
+  
+ 
 
 
 
