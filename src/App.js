@@ -57,7 +57,7 @@ function App() {
    
     
     
-    if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
+    if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === null){
       setMsg(`Amazing! You passed the quiz without any wrong answers!`)
       setColor("green")
       setHeader("Quiz completed!")
