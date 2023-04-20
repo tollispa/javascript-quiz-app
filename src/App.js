@@ -2,6 +2,7 @@
 import './App.css';
 import { FaSync } from 'react-icons/fa';
 
+
 import { 
   javaScriptArray, 
   disneyArray, 
@@ -59,12 +60,14 @@ function App() {
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
       setMsg(`Congratulations!✅ You passed the quiz without any wrong answers! `)
       setColor("green")
+     
       setBackgroundColor("#80ff80")
       return 
     }
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
       setMsg(`Correct! ✅ This was the last question!`)
       setColor("green")
+      
       setBackgroundColor("#80ff80")
       return 
     }
@@ -125,7 +128,7 @@ function App() {
        {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
-{emptyQuiz.length === 0 ? null : <p className='font-bold'>Wrong answers count <span className='text-red-600 font-bold' >{count}</span></p>}
+{ emptyQuiz.length > 0 && count > 0  ? <p className='font-bold h-[16px]'>Wrong answers: <span className='text-red-600 font-bold' >{count}</span></p> : <p className='h-[16px]'></p>}
       <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
      
       </p>
