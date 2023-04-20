@@ -122,7 +122,7 @@ function App() {
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
 
 
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-scree text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
 {emptyQuiz.length === 0 ? null : <p className='font-bold'>Wrong answers count <span className='text-red-600 font-bold' >{count}</span></p>}
@@ -133,7 +133,7 @@ function App() {
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
     
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white cursor-pointer  text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:w-[40%] sm:h-auto sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-blue-100 cursor-pointer  text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:w-[40%] sm:h-auto sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
@@ -149,7 +149,7 @@ function App() {
   }
   { emptyQuiz.length === 0 ? null : 
 
-<button onClick={() => homeBtn()}className='bg-black rounded text-white text-2xl p-2 w-[30%] h-[50px] font-bold hover:shadow-lg absolute right-10 bottom-5 sm:static sm:w-[50%] sm:m-4'>🏠</button>
+<button onClick={() => homeBtn()}className='bg-black rounded text-white text-xl p-2 w-[30%] h-[50px]  hover:shadow-lg absolute right-10 bottom-5 sm:static sm:w-[50%] sm:m-4'>Home</button>
 
 
 }
