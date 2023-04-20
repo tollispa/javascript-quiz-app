@@ -119,7 +119,7 @@ function App() {
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
+       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-scree text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
       <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
@@ -129,12 +129,12 @@ function App() {
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
     
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white cursor-pointer  text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:min-w-[40%] sm:h-[70px] sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-white cursor-pointer  text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:w-[40%] sm:h-auto sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
     emptyQuiz.length === 0 ? null :
-    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-[100%]`}>{msg}</span>
+    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-[50%]`}>{msg}</span>
   }
  
   { emptyQuiz.length === 0 ? null : 
