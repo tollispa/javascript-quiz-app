@@ -58,15 +58,16 @@ function App() {
     
     
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === 0){
-      setMsg(`Congratulations!✅ You passed the quiz without any wrong answers! `)
+      setMsg(`Amazing! You passed the quiz without any wrong answers!`)
       setColor("green")
-     
+      setHeader("Quiz completed!")
       setBackgroundColor("#80ff80")
       return 
     }
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer){
-      setMsg(`Correct! ✅ This was the last question!`)
+      setMsg(`Correct! This was the last question!`)
       setColor("green")
+      setHeader("Quiz completed! ✔️")
       
       setBackgroundColor("#80ff80")
       return 
