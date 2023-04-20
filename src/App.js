@@ -137,7 +137,7 @@ function App() {
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
 
 
-       {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} <span className='text-sm text-white absolute right-10 top-10'>{quizIndex +1}/{emptyQuiz.length}</span></h1>
+       {emptyQuiz.length === 0 ? <h1 className='font-bold text-2xl text-center m-2 bg-black text-white p-6 w-full shadow-lg'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1> :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} <span className='text-sm text-white absolute right-10 top-10'>{quizIndex +1}/{emptyQuiz.length}</span></h1>
 
 }
 { emptyQuiz.length > 0 && count > 0  ? <p className='font-bold h-[16px]'>Wrong answers: <span className='text-red-600 font-bold' >{count}</span></p> : <p className='h-[16px]'></p>}
@@ -171,8 +171,8 @@ function App() {
 }
 </p>
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
-  <h1 className='font-bold text-2xl mb-5 bg-black text-white p-6 w-full shadow-lg'>Welcome to the Quiz! <button className='sm:hidden' onClick={() => window.location.reload()}><FaSync size={15}/> </button></h1>
-  <p className='font-bold text-black/50'>Select a category</p>
+ 
+  <p className='font-bold text-black/50'>Choose category</p>
  
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
   <button className="bg-black rounded text-white cursor-pointer p-2 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
