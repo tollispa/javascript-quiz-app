@@ -27,7 +27,7 @@ function App() {
  
   const correctAnswer = emptyQuiz.map((answer) => answer)
 
-console.log("e", emptyQuiz)
+
   
  useEffect(() => {
    if(emptyQuiz === javaScriptArray) {
@@ -118,7 +118,7 @@ console.log("e", emptyQuiz)
     setColor("#8B0000")
   }
   return (
-    <div className="flex bg-blue-400 flex-col items-center w-full h-screen ">
+    <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
        {emptyQuiz.length === 0 ? null :  <h1 className='bg-black font-bold text-2xl w-full text-center text-white m-2 shadow-lg p-6'>{header} {quizIndex +1}/{emptyQuiz.length}</h1>
 
 }
@@ -129,7 +129,7 @@ console.log("e", emptyQuiz)
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 min-w-[50%]'>
     
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
-    <span className="bg-white cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-[100%] sm:min-w-[40%] sm:h-[70px] sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
+    <span className="bg-white cursor-pointer  text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:min-w-[40%] sm:h-[70px] sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
       {choice}
     </span>
   ))}{
