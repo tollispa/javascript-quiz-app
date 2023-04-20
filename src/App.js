@@ -151,7 +151,7 @@ function App() {
     </span>
   ))}{
     emptyQuiz.length === 0 ? null :
-    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-auto p-2 sm:w-[50%]`}>{msg}</span>
+    <span style={{color: `${color}`, backgroundColor: `${backgroundColor}`}}className={` rounded font-bold m-2 p-1 block text-lg text-center sm:text-lg w-full p-2 sm:w-[50%]`}>{msg}</span>
   }
  
   { emptyQuiz.length === 0 ? null : 
