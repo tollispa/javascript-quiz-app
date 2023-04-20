@@ -1,6 +1,6 @@
 
 
-import {javaScriptQuiz, disneyQuiz, gotQuiz, javaQuestions, footballQuestions, tvShowQuestions, friendsQuiz} from "./questions"
+import {javaScriptQuiz, disneyQuiz, gotQuiz, javaQuestions, footballQuestions, tvShowQuestions, friendsQuiz, countriesQuiz} from "./questions"
 
 export const javaScriptArray = [];
 let javaScriptQuizCopy = [...javaScriptQuiz];
@@ -56,4 +56,12 @@ for (let i = 0; i < 5; i++) {
   const randomIndex = Math.floor(Math.random() * friendsQuizCopy.length);
   friendsArray.push(friendsQuizCopy[randomIndex]);
   friendsQuizCopy.splice(randomIndex, 1);
+}
+
+export const countriesArray = [];
+let countriesQuizCopy = [...countriesQuiz];
+for (let i = 0; i < 5; i++) {
+  const randomIndex = Math.floor(Math.random() * countriesQuizCopy.length);
+  countriesArray.push(countriesQuizCopy[randomIndex]);
+  countriesArray.splice(randomIndex, 1);
 }

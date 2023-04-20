@@ -11,7 +11,8 @@ import {
   javaArray, 
   footballArray, 
   tvShowArray, 
-  friendsArray 
+  friendsArray,
+  countriesArray
 } from './Questions/randomQuestions';
 
 import {useEffect, useState} from "react"
@@ -55,6 +56,9 @@ function App() {
             if(emptyQuiz === friendsArray) {
               setHeader("Friends Quiz")
               }
+              if(emptyQuiz === countriesArray) {
+                setHeader("Countries Quiz")
+                }
  },[emptyQuiz])
   const clickAnswer = (index, choice) => {
    
@@ -203,6 +207,7 @@ function App() {
   <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
   <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
   <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(countriesArray)}}>Countries<span className='absolute left-2 top-[25%]'>🌐</span></button>
  </div>
 
   

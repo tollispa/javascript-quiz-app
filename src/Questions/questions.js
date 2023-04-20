@@ -575,6 +575,102 @@ export const friendsQuiz = [  {    question: "What was the name of the original 
   }
 ];
 
+export const countriesQuiz = [  {    question: "What is the capital city of France?",    choices: [      "Paris",      "London",      "Berlin",      "Madrid"    ],
+    answer: "Paris"
+  },
+  {
+    question: "Which country is known for its beautiful tulip fields?",
+    choices: [
+      "Netherlands",
+      "Belgium",
+      "France",
+      "Denmark"
+    ],
+    answer: "Netherlands"
+  },
+  {
+    question: "What is the largest city in Canada?",
+    choices: [
+      "Toronto",
+      "Montreal",
+      "Vancouver",
+      "Calgary"
+    ],
+    answer: "Toronto"
+  },
+  {
+    question: "Which country is famous for its pyramids?",
+    choices: [
+      "Egypt",
+      "Sudan",
+      "Algeria",
+      "Libya"
+    ],
+    answer: "Egypt"
+  },
+  {
+    question: "What is the official language of Brazil?",
+    choices: [
+      "Portuguese",
+      "Spanish",
+      "English",
+      "French"
+    ],
+    answer: "Portuguese"
+  },
+  {
+    question: "Which country is the smallest in the world by land area?",
+    choices: [
+      "Vatican City",
+      "Monaco",
+      "San Marino",
+      "Nauru"
+    ],
+    answer: "Vatican City"
+  },
+  {
+    question: "What is the tallest mountain in the world?",
+    choices: [
+      "Mount Everest",
+      "K2",
+      "Kangchenjunga",
+      "Lhotse"
+    ],
+    answer: "Mount Everest"
+  },
+  {
+    question: "Which country is home to the Great Barrier Reef?",
+    choices: [
+      "Australia",
+      "Indonesia",
+      "Thailand",
+      "Philippines"
+    ],
+    answer: "Australia"
+  },
+  {
+    question: "What is the largest desert in the world?",
+    choices: [
+      "Sahara",
+      "Arabian",
+      "Gobi",
+      "Kalahari"
+    ],
+    answer: "Sahara"
+  },
+  {
+    question: "Which country is famous for its delicious chocolate?",
+    choices: [
+      "Switzerland",
+      "Belgium",
+      "France",
+      "Netherlands"
+    ],
+    answer: "Belgium"
+  }
+];
+
+
 
 
 
