@@ -90,6 +90,7 @@ function App() {
     }
     if(choice !== correctAnswer[quizIndex].answer && color === "red"){
       setMsg("Oops! Wrong again!")
+      setcount(count +1)
      
       return
     }
