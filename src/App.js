@@ -1,6 +1,6 @@
 
 import './App.css';
-import { FaSync, FaJs, FaJava, FaArrowDown, FaArrowUp} from 'react-icons/fa';
+import { FaSync, FaJs, FaJava, FaArrowDown, FaArrowUp, FaCrown} from 'react-icons/fa';
 
 
 
@@ -27,6 +27,7 @@ function App() {
   const [emptyQuiz, setEmptyQuiz] = useState([])
   const [backgroundColor, setBackgroundColor] = useState("none")
   const [header, setHeader] = useState("")
+  const [completedQuiz, setCompletedQuiz] = useState(false)
   const [scrollBtn, setScrollBtn] = useState(true)
   
  
@@ -67,7 +68,8 @@ function App() {
     if(quizIndex === emptyQuiz.length -1 && choice === correctAnswer[quizIndex].answer && count === null){
       setMsg(`Amazing! You passed the quiz without any wrong answers!`)
       setColor("green")
-      setHeader("Quiz completed!")
+      setHeader("Quiz completed!✔️")
+      setCompletedQuiz(!completedQuiz)
       setBackgroundColor("#80ff80")
       
       return 
@@ -84,6 +86,7 @@ function App() {
       setMsg(`Correct! Bravo!`)
       setColor("green")
       setHeader("Quiz completed! ✔️")
+      setCompletedQuiz(!completedQuiz)
       
       setBackgroundColor("#80ff80")
       return 
@@ -150,6 +153,7 @@ function App() {
     setBackgroundColor("transparent")
     setQuizIndex(0)
     setColor("#8B0000")
+    setCompletedQuiz(!completedQuiz)
   }
   return (
     <div className="flex bg-blue-400 flex-col items-center w-full h-screen">
@@ -159,10 +163,12 @@ function App() {
 
 }
 { emptyQuiz.length > 0 && count > 0  ? <p className='font-bold h-[16px]'>Wrong answers: <span className='text-red-600 font-bold' >{count}</span></p> : <p className='h-[16px]'></p>}
-      <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}
+     {!completedQuiz ? <p className='font-bold p-4 text-m sm:text-4xl'>{emptyQuiz[quizIndex]?.question}</p> : null
+
+     } 
      
-      </p>
-    
+      
+    {!completedQuiz ?
     <p className='flex flex-wrap sm:relative justify-center text-center m-1 w-full'>
     
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
@@ -187,7 +193,14 @@ function App() {
 
 
 }
-</p>
+</p> : <div className=''>
+
+  <p className='font-bold m-6 text-center'>Quiz completed! <br/>Go back to <button className='underline text-blue-700' onClick={homeBtn}>Home</button></p>
+  <FaCrown className='text-yellow-400 mt-10' size={250}/>
+  <p className='font-bold text-center text-yellow-400'>Here is your crown!</p>
+  </div>
+
+}
 <div className='flex flex-wrap text-center justify-center'  style={{ display: emptyQuiz.length === 0 ? "block" : "none" }}>
  
   <p className='font-bold text-black'>Select category</p>
