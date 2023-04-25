@@ -195,7 +195,7 @@ function App() {
 }
 </p> : <div className=''>
 
-  <p className='font-bold m-6 text-center'>Quiz completed! <br/>Go back to <button className='underline text-blue-700' onClick={homeBtn}>Home</button></p>
+  <p className='font-bold m-6 text-center '>Quiz completed! <br/>Go back to <button className='underline text-blue-700' onClick={homeBtn}>Home</button></p>
   <FaCrown className='text-yellow-400 mt-10' size={250}/>
   <p className='font-bold text-center text-yellow-400'>Here is your crown!</p>
   </div>
