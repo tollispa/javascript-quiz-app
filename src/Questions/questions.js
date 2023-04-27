@@ -372,17 +372,8 @@ export const javaQuestions = [
       "`StringBuilder` and `StringBuffer` are used for different data types."
     ],
     answer: "`StringBuilder` is not thread-safe, while `StringBuffer` is thread-safe."
-  },
-  {
-    question: "What is the difference between a `private` and `protected` method in Java?",
-    choices: [
-      "A `private` method can only be accessed within the same class, while a `protected` method can also be accessed within subclasses.",
-      "A `protected` method can only be accessed within the same class, while a `private` method can also be accessed within subclasses.",
-      "A `private` method can be accessed from anywhere, while a `protected` method can only be accessed within the same package.",
-      "A `protected` method can be accessed from anywhere, while a `private` method can only be accessed within the same package."
-    ],
-    answer: "A `private` method can only be accessed within the same class, while a `protected` method can also be accessed within subclasses."
   }
+  
   
   
   
