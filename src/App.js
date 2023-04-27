@@ -172,7 +172,7 @@ function App() {
      
       
     {!completedQuiz ?
-    <p className='flex flex-wrap sm:relative justify-center text-center m-1 w-full'>
+    <p className='flex flex-wrap sm:relative justify-center text-center m-1 w-full h-auto'>
     
   {emptyQuiz[quizIndex]?.choices.map((choice, index) => (
     <span className="bg-blue-100 cursor-pointer text-black border-2 border-black font-bold shadow-lg m-1 p-3 sm:p-4 rounded w-full sm:w-[40%] sm:h-auto sm:text-xl" key={index} onClick={() => clickAnswer(index, choice)}>
@@ -186,13 +186,13 @@ function App() {
  
   { emptyQuiz.length === 0 ? null : 
 
-  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[50px] hover:shadow-lg absolute text-xl left-5 bottom-5 sm:static sm:w-[50%]'>Back</button>
+  <button onClick={backBtn}className='bg-black rounded text-white p-2 w-[30%] h-[50px] hover:shadow-lg  text-xl  sm:static sm:w-[50%] mr-10 mt-10 sm:m-1'>Back</button>
   
 
   }
   { emptyQuiz.length === 0 ? null : 
 
-<button onClick={() => homeBtn()}className='bg-black rounded text-white text-xl p-2 w-[30%] h-[50px]  hover:shadow-lg absolute right-10 bottom-5 sm:static sm:w-[50%] sm:m-4'>Home</button>
+<button onClick={() => homeBtn()}className='bg-black rounded text-white text-xl p-2 w-[30%] h-[50px]  hover:shadow-lg  sm:static sm:w-[50%] ml-10 sm:m-4 mt-10 sm:m-1'>Home</button>
 
 
 }
