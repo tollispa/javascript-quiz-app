@@ -215,16 +215,16 @@ function App() {
     
 
 
- <div id="slider" className="scroll-smooth overflow-auto scrollbar-thin scrollbar-thumb-gray-500  scrollbar-track-gray-200 h-[55%] scrollbar-w-2 sm:overflow-visible">
+ <div id="slider" className="scroll-smooth overflow-auto scrollbar-thin scrollbar-thumb-gray-500  scrollbar-track-gray-200 h-[55%] scrollbar-w-2 ">
   
- <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones<span className='absolute left-2 top-[25%]'>📺</span></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaArray)}}>Java <FaJava className='absolute left-2 top-[35%] text-yellow-100' /></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
-  <button className="bg-blue-700 rounded text-white cursor-pointer p-4 w-[70%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(countriesArray)}}>Countries<span className='absolute left-2 top-[25%]'>🌐</span></button>
+ <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaScriptArray)}}>JavaScript<FaJs className='absolute left-2 top-[35%] text-yellow-400'/></button>
+  <button className="bg-blue-700 hover:bg-blue-600  rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(disneyArray)}}>Disney <span className='absolute left-2 top-[25%]'>🐭</span></button>
+  <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(gotArray)}}>Game of Thrones<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(javaArray)}}>Java <FaJava className='absolute left-2 top-[35%] text-yellow-100' /></button>
+  <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(footballArray)}}>Football <span className='absolute left-2 top-[25%]'>⚽️</span></button>
+  <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(tvShowArray)}}>TV-shows<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(friendsArray)}}>Friends<span className='absolute left-2 top-[25%]'>📺</span></button>
+  <button className="bg-blue-700 hover:bg-blue-600 rounded text-white cursor-pointer p-4 w-[70%] sm:w-[50%] m-3 text-center justify-center font-bold text-xl relative"onClick={() => {setEmptyQuiz(countriesArray)}}>Countries<span className='absolute left-2 top-[25%]'>🌐</span></button>
  </div>
 
   
